@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For You</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Cinematic Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="film-grain"></div>
+
+<!-- 💖 LOVE QUESTION -->
+<section class="page active" id="love">
+  <h1>One honest question</h1>
+  <p>Before anything else…</p>
+  <p class="question">Do you love me?</p>
+
+  <div class="love-buttons">
+    <button class="yes" onclick="loveYes()">Yes</button>
+    <button class="no" id="noBtn">No</button>
+  </div>
+</section>
+
+<!-- 🌸 PAGE 1 -->
+<section class="page" id="p1">
+  <h1>This is for you</h1>
+  <p>
+    Something made slowly.<br>
+    Thinking of you.
+  </p>
+  <input id="yearInput" placeholder="That special year">
+  <button onclick="page1()">Turn the page</button>
+</section>
+
+<!-- 🌿 PAGE 2 -->
+<section class="page" id="p2">
+  <h1>You always understood</h1>
+  <p>(That year × 3) − 5</p>
+  <input id="logicInput">
+  <button onclick="page2()">Continue</button>
+</section>
+
+<!-- 💞 PAGE 3 — NICKNAME -->
+<section class="page" id="p3">
+  <h1>Something only we know</h1>
+  <p>
+    What nickname did you give me,<br>
+    and call me lovingly?
+  </p>
+  <input id="nicknameInput" placeholder="That cute name">
+  <button onclick="page3()">Go on</button>
+</section>
+
+<!-- 💬 PAGE 4 — LAST WORD -->
+<section class="page" id="p4">
+  <h1>A small habit</h1>
+  <p>
+    On which word did our conversations<br>
+    always end?
+  </p>
+  <input id="lastWordInput" placeholder="That final word">
+  <button onclick="page4()">Continue</button>
+</section>
+
+<!-- 🧩 JIGSAW -->
+<section class="page" id="p5">
+  <h1>This moment mattered</h1>
+  <p>Put it back together.</p>
+  <div id="puzzle"></div>
+</section>
+
+<!-- 🎆 FINAL -->
+<section class="page" id="final">
+  <h1>🎉 Happy New Year</h1>
+  <p class="final-text">
+    This wasn’t a game.<br><br>
+
+    It was proof.<br><br>
+
+    That you remember me,<br>
+    the way I remember you.<br><br>
+
+    Ye angrezi boht ho gayi aur haan ye baat sach hai ki<br>
+    I love you more than you will ever know.<br> 
+    I don't know ki tu kaisi hai but maybe tu kuch share krna bhi nhi chahti<br> 
+    It is very difficult for me to not talk to you for this long<br>
+  </p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

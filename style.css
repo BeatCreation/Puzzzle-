@@ -1,0 +1,131 @@
+:root {
+  --paper: #fff7ee;
+  --ink: #2e2a26;
+  --ink-soft: #5a544e;
+  --sunset: #e9b872;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--ink);
+
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255,240,220,0.8), transparent 50%),
+    linear-gradient(to bottom, #fffaf3, #f3e3d1),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
+
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+/* Film grain */
+.film-grain {
+  position: fixed;
+  inset: 0;
+  background: url("https://i.imgur.com/o7P6D5F.png");
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.page {
+  position: absolute;
+  inset: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.page.active {
+  display: flex;
+  animation: fade 2s ease;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-bottom: 18px;
+}
+
+p {
+  max-width: 460px;
+  line-height: 1.9;
+  color: var(--ink-soft);
+}
+
+input {
+  margin-top: 20px;
+  padding: 14px 18px;
+  width: 240px;
+  border-radius: 14px;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  background: var(--paper);
+}
+
+button {
+  margin-top: 28px;
+  padding: 14px 34px;
+  font-size: 15px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(to bottom, #f4d29a, var(--sunset));
+}
+
+.question {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  margin: 22px 0;
+}
+
+/* Love buttons */
+.love-buttons {
+  position: relative;
+  width: 260px;
+  height: 120px;
+}
+
+.love-buttons button {
+  position: absolute;
+}
+
+.yes { left: 30px; bottom: 10px; }
+.no { right: 30px; bottom: 10px; }
+
+/* Puzzle */
+#puzzle {
+  width: 320px;
+  height: 320px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 4px;
+  margin-top: 28px;
+}
+
+.tile {
+  background-image: url("assets/memory.jpg");
+  background-size: 320px 320px;
+  border-radius: 12px;
+  cursor: grab;
+}
+
+.final-text {
+  font-size: 1.15rem;
+  line-height: 2;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
